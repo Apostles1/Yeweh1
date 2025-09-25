@@ -1,0 +1,92 @@
+name: Summarize new issues
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  summary:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      models: read
+      contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run AI inference
+        id: inference
+        uses: actions/ai-inference@v1
+        with:
+          prompt: |
+            Summarize the following GitHub issue in one paragraph:
+            Title: ${{ github.event.issue.title }}
+            Body: ${{ github.event.issue.body }}
+
+      - name: Comment with AI summary
+        run: |
+          gh issue comment $ISSUE_NUMBER --body '${{ steps.inference.outputs.response }}'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          RESPONSE: ${{ steps.inference.outputs.response }}            - name: Bytebase Create Plan From Release
+  # You may pin to the exact commit or the version.
+  # uses: bytebase/create-plan-from-release-action@1e3acace40fbf9cb25001e831ac7f4550a857299
+  uses: bytebase/create-plan-from-release-action@v1.0.1
+  with:
+    # The bytebase URL.
+    url: 
+    # The Bytebase access token.
+    token: 
+    # The project on Bytebase. Format: projects/{project}
+    project: 
+    # The release to create plan from. Format: projects/{project}/releases/{release}
+    release: 
+    # The database group or databases to deploy. Either a comma separated list of the databases or a database group. Databases example: `instances/mysql1/databases/db1,instances/mysql1/databases/db2`. Database format: instances/{instance}/databases/{database} Database group example: `projects/exa/databaseGroups/mygroup` Database group format: projects/{project}/databaseGroups/{databaseGroup}
+
+    targets: 
+    # An enum to determine should we run plan checks and fail on warning or error. Valid values are `SKIP`, `FAIL_ON_WARNING`, `FAIL_ON_ERROR`
+
+    check-plan: # optional, default is SKIP
+                      - name: OpenShift Self Hosted Runner Installer
+  # You may pin to the exact commit or the version.
+  # uses: redhat-actions/openshift-actions-runner-installer@8b4d88c1808ced3a39fd0e43f9ce038163fad8a8
+  uses: redhat-actions/openshift-actions-runner-installer@v1
+  with:
+    # GitHub Personal access token. The token must have the "repo" permission scope.
+For organization runners, the token must also have the "admin:org" scope.
+
+    github_pat: 
+    # Repository or organization for the self-hosted runner.
+For example, "redhat-actions/check-self-hosted-runner" for a repository, or "redhat-actions" for an organization.
+Defaults to the current repository.
+
+    runner_location: # optional
+    # Container image to use for the runner.
+    runner_image: # optional
+    # Tag to use for the runner container image.
+    runner_tag: # optional
+    # Labels in the runners to check for.
+For multiple labels, separate by comma and an optional space. For example, "label1, label2".
+
+    runner_labels: # optional
+    # Number of runner replicas to create.
+    runner_replicas: # optional, default is 1
+    # Optional namespace (aka project) to pass to all Helm or Kubernetes commands.
+
+    namespace: # optional
+    # Uninstall any release that matches the `helm_release_name` and `namespace` before running `helm install`.
+If this is false, and the release exists, the action will fail when the `helm install` fails.
+
+    helm_uninstall_existing: # optional, default is true
+    # The Helm Release name to give the new runner release. Defaults to the repository or org name plus "-runners".
+    helm_release_name: # optional
+    # Any other arguments to pass to the 'helm install' command.
+Separate arguments by newline. Do not use quotes - @actions/exec will do the quoting for you.
+
+    helm_extra_args: # optional
+    # Version of our Helm Chart to install. Defaults to the latest.
+    helm_chart_version: # optional
+          
