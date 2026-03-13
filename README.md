@@ -1,2 +1,2 @@
 # Yeweh1
-Inheritant psycological insight of creation 'Designconstant'
+Estoric compose, 'hieroglyphic creation', 'foundation stage' from 'structured 'nature of 'creation compose build component'. Inheritant psycological insight of creation 'Designconstant'  technology from 'factory/cosmological- designated performance environments: interior-exterior, which were channelled through {compose-exodus} "human-geneology", 'federation millenia', 'enterprise-archi9tecture'.
