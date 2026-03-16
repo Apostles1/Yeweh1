@@ -6,7 +6,7 @@ The enterprise architecture of Stewardships sect topology ‘architectural image
 
 
  Enterprise Resource Management (ERM) 
- Quality and Life-Cycle Tools The three r's equation terminator on the statutory tree of life buisness/affairsmanifestations to pass the judgedment of law on social ethic priveledge of expanded Anthropology concept,' but in the Gospel century of matthew , mark , luke , john the will attached to the deed revealed through the chores of lifes natural intuition guided by the initiative brands of the service and services world dynamic 'life consciousness of industry methodology, rendering advanced  cultural exercise of 'innovative prodigy' posing as variable ettiquette and reasource ,' are truly sector impliment and construct of enterpise .
+ Quality and Life-Cycle Tools The three r's equation terminator on the statutory tree of life buisness/affairs manifestations to pass the judgedment of law on social ethic priveledge of expanded Anthropology concept,' but in the Gospel century of matthew , mark , luke , john the will attached to the deed revealed through the chores of lifes natural intuition guided by the initiative brands of the service and services world dynamic 'life consciousness of industry methodology, rendering advanced  cultural exercise of 'innovative prodigy' posing as variable ettiquette and reasource ,' are truly sector impliment and construct of enterpise .
  
  
 life accountable action thats deterrent from the compliance 
